@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "undici": "^4.16.0"
+  },
+  "name": "nomorals",
+  "description": "Find roblox bot alts.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node main.js"
+  },
+  "keywords": [
+    "roblox"
+  ],
+  "author": "noahcoolboy",
+  "license": "MIT",
+}
