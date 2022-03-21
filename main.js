@@ -16,11 +16,13 @@ setImmediate(async () => {
         let users = await undici.request(`https://www.roblox.com/search/users/results?maxRows=100&keyword=${name}`)
         users = await users.body.json()
 
+        if(!users.UserSearchResults) continue
         for (user of users.UserSearchResults) {
             if (user.Name.match(NAMEREGEX)) {
                 let groups = await undici.request(`https://groups.roblox.com/v1/users/${user.UserId}/groups/roles`)
                 groups = await groups.body.json()
                 
+                if(!groups.data) continue
                 for (group of groups.data) {
                     let cursor = ""
                     
