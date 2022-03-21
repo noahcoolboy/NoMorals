@@ -9,4 +9,4 @@ Any roblox multitool can be used to turn User:Pass into cookies, which you can t
 3. Open a terminal in the project folder
 4. Run `npm install` to install the required node modules
 5. Run `node main.js` to run the tool
-6. Enjoy!
+6. Enjoy! Alts will be output in alts.txt
