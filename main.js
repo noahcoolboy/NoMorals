@@ -27,7 +27,8 @@ setImmediate(async () => {
                     while (true) {
                         let users = await undici.request(`https://groups.roblox.com/v1/groups/${group.group.id}/roles/${group.role.id}/users?limit=100&sortOrder=Desc&cursor=${cursor}`)
                         users = await users.body.json()
-
+                        
+                        if(!users.data) break
                         for (user of users.data) {
                             let res = user.username.match(NAMEREGEX)
                             if(!res)
