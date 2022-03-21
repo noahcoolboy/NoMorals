@@ -48,4 +48,4 @@ setImmediate(async () => {
     }
 })
 
-process.on("SIGINT", () => fs.writeFileSync("./cache.json", JSON.stringify(cache)) && process.exit(0))
+process.on("SIGINT", () => {fs.writeFileSync("./cache.json", JSON.stringify(cache)); process.exit(0)})
